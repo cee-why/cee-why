@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next gemini use-motion" lang="zh-Hans">
+<html class="theme-next muse use-motion" lang="zh-Hans">
 <head>
   <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -75,7 +75,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Gemini',
+    scheme: 'Muse',
     version: '6.0.4',
     sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: false,
@@ -111,7 +111,7 @@
 <meta property="og:site_name" content="Cee Why&#39;s Blog">
 <meta property="og:description" content="在大一刚刚开始学高数上册的时候，老师直接把一大坨看不懂地符号加上文字的极限定义甩过来，要求记住。当时就对$\epsilon-\delta$定义的极限不是很理解，只记住了一个极限是趋近过程中的近似，对极限本身的概念非常模糊。在考研的准备过程中，逐渐对极限这个概念有了一定的理解，并对$\epsilon-\delta$语言有了形象的认知。于是将自己的理解整理成文章，希望能帮助同样对极限理解不清晰的朋友明">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-08T15:21:09.450Z">
+<meta property="og:updated_time" content="2018-03-18T14:18:06.458Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="对误差-输入语言下的极限定义的理解">
 <meta name="twitter:description" content="在大一刚刚开始学高数上册的时候，老师直接把一大坨看不懂地符号加上文字的极限定义甩过来，要求记住。当时就对$\epsilon-\delta$定义的极限不是很理解，只记住了一个极限是趋近过程中的近似，对极限本身的概念非常模糊。在考研的准备过程中，逐渐对极限这个概念有了一定的理解，并对$\epsilon-\delta$语言有了形象的认知。于是将自己的理解整理成文章，希望能帮助同样对极限理解不清晰的朋友明">
@@ -240,12 +240,6 @@
         <li class="menu-item menu-item-archives">
           <a href="/archives/" rel="section">
             <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />Archives</a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-schedule">
-          <a href="/schedule/" rel="section">
-            <i class="menu-item-icon fa fa-fw fa-calendar"></i> <br />Schedule</a>
         </li>
       
 
@@ -422,13 +416,13 @@
       
 
       
-        <p>在大一刚刚开始学高数上册的时候，老师直接把一大坨看不懂地符号加上文字的极限定义甩过来，要求记住。当时就对$\epsilon-\delta$定义的极限不是很理解，只记住了一个极限是趋近过程中的近似，对极限本身的概念非常模糊。<br>在考研的准备过程中，逐渐对极限这个概念有了一定的理解，并对$\epsilon-\delta$语言有了形象的认知。于是将自己的理解整理成文章，希望能帮助同样对极限理解不清晰的朋友明晰这个概念。</p>
+        <p>在大一刚刚开始学高数上册的时候，老师直接把一大坨看不懂地符号加上文字的极限定义甩过来，要求记住。当时就对$\epsilon-\delta$定义的极限不是很理解，只记住了一个极限是趋近过程中的近似，对极限本身的概念非常模糊。<br>在考研的准备过程中，逐渐对极限这个概念有了一定的理解，并对$\epsilon-\delta$语言有了形象的认知。于是将自己的理解整理成文章，希望能帮助同样对极限理解不清晰的朋友明晰这个概念。<br><a id="more"></a></p>
 <h1 id="极限的诞生"><a href="#极限的诞生" class="headerlink" title="极限的诞生"></a>极限的诞生</h1><p>16世纪西方社会是思想与科学技术的爆发时期。科学，生产，技术中出现许多问题。关于怎么求瞬时速度，曲边形面积等数学问题大量涌出，困扰着当时的数学家。由此，为了解决这些问题，引入了极限这个概念。</p>
 <h1 id="极限定义的发展"><a href="#极限定义的发展" class="headerlink" title="极限定义的发展"></a>极限定义的发展</h1><h2 id="粗略的描述"><a href="#粗略的描述" class="headerlink" title="粗略的描述"></a>粗略的描述</h2><p>最初对极限的定义很模糊，当描述 ${\lim_{x \to x_0}f(x)=A}$ 时，只有对其的描述，而非定义：</p>
 <blockquote>
 <p>若${\lim_{x \to x_0}f(x)=A}$，即在$x$趋于$x_0$的过程中，$f(x)$与$A$的距离要多小有多小</p>
 </blockquote>
-<p>对于数学来说，这是不可接受的，作为微积分学的基础概念，必须有严格的数学语言定义。<br><a id="more"></a></p>
+<p>对于数学来说，这是不可接受的，作为微积分学的基础概念，必须有严格的数学语言定义。</p>
 <h2 id="清晰的定义"><a href="#清晰的定义" class="headerlink" title="清晰的定义"></a>清晰的定义</h2><p>柯西提出了极限的清晰定义：如果一个函数的极限为A，那么任意给定一个足够小的$\epsilon$&gt;0，都有$|f(x)-A|&lt;\epsilon$成立。</p>
 <h2 id="完整的定义"><a href="#完整的定义" class="headerlink" title="完整的定义"></a>完整的定义</h2><p>德国数学家维尔斯特拉斯对柯西的定义进一步加工，于是有了今天的$\epsilon-\delta$定义。</p>
 <h1 id="对-epsilon-delta-定义的理解"><a href="#对-epsilon-delta-定义的理解" class="headerlink" title="对$\epsilon-\delta$定义的理解"></a>对$\epsilon-\delta$定义的理解</h1><h2 id="误差-输入语言"><a href="#误差-输入语言" class="headerlink" title="误差-输入语言"></a>误差-输入语言</h2><p>所谓$\epsilon-\delta$语言，就是我们的误差-输入语言。<br>从柯西的极限定义出发，要描述函数值与极限距离要多小有多小的状态，我们可以任意给出一个误差值，如果可以找到一个邻域，使得函数值与极限之间的偏移量不超过给定的误差值。当我们要求的误差越来越小时，函数值与极限的距离也就越来越近，精准地描述了距离要多小有多小这个自然语言的描述。</p>
@@ -499,8 +493,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/03/18/the-note-of-algorithm-01/" rel="prev" title="算法笔记》学习笔记（一） c/c++快速入门">
-                算法笔记》学习笔记（一） c/c++快速入门 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/03/18/the-note-of-algorithm-01/" rel="prev" title="《算法笔记》学习笔记（一） c/c++快速入门">
+                《算法笔记》学习笔记（一） c/c++快速入门 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -710,7 +704,7 @@
 
 
 
-  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Gemini</a> v6.0.4</div>
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Muse</a> v6.0.4</div>
 
 
 
@@ -824,13 +818,6 @@
 
   
   
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=6.0.4"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.0.4"></script>
-
-
 
   
   <script type="text/javascript" src="/js/src/scrollspy.js?v=6.0.4"></script>

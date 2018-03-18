@@ -407,9 +407,7 @@
 
       
         
-          
-            <a id="more"></a>
-<h1 id="基本数据类型"><a href="#基本数据类型" class="headerlink" title="基本数据类型"></a>基本数据类型</h1><h2 id="变量类型"><a href="#变量类型" class="headerlink" title="变量类型"></a>变量类型</h2><ul>
+          <h1 id="基本数据类型"><a href="#基本数据类型" class="headerlink" title="基本数据类型"></a>基本数据类型</h1><h2 id="变量类型"><a href="#变量类型" class="headerlink" title="变量类型"></a>变量类型</h2><ul>
 <li>整型<ul>
 <li>int <ul>
 <li>$10^9$以内可定义为int</li>
@@ -417,147 +415,14 @@
 </ul>
 </li>
 <li>long long<ul>
-<li>取值超过$2^{63}-1$时可用</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>浮点型<ul>
-<li>float<ul>
-<li>6-7位有效精度</li>
-</ul>
-</li>
-<li>double<ul>
-<li>15-16位有效精度</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>布尔型</li>
-<li>字符型<ul>
-<li>小写字母比大写字母ASCII码值大32</li>
-</ul>
-</li>
-</ul>
-<h1 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h1><ul>
-<li><p>宏定义</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> 标识符 常量</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>const常量</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> pi = <span class="number">3.14</span>;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h1 id="顺序结构"><a href="#顺序结构" class="headerlink" title="顺序结构"></a>顺序结构</h1><h2 id="输入与输出"><a href="#输入与输出" class="headerlink" title="输入与输出"></a>输入与输出</h2><ul>
-<li>scanf(“格式控制”, 变量地址);<ul>
-<li>double用<code>%lf</code>读入</li>
-<li>以空白符判断结束<ul>
-<li>空格</li>
-<li>换行</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>printf(“格式控制”, 变量名称);</li>
-<li><p>实用输出格式</p>
-<ul>
-<li>%md<ul>
-<li>使不足m位的整数以m位输出，不足位数用空格填充</li>
-</ul>
-</li>
-<li><p>%0d</p>
-<ul>
-<li>与上同，但以0填充</li>
-</ul>
-</li>
-<li><p>%.mf</p>
-<ul>
-<li>控制浮点数位数</li>
-<li>当题目要求是保留到小数点后XX位时使用</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="常用math函数"><a href="#常用math函数" class="headerlink" title="常用math函数"></a>常用math函数</h2><ul>
-<li>fabs(double x)</li>
-<li>floor(double x)和ceil(double x)</li>
-<li>pow(double r, double p)<ul>
-<li>返回$r^p$</li>
-</ul>
-</li>
-<li>sqrt(double x)</li>
-<li>log(double x)</li>
-<li>sin(double x)</li>
-<li>asin(double x)</li>
-<li>round(double x)</li>
-</ul>
-<h1 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h1><ul>
-<li><p>若数组空间较大，定义在主函数外</p>
-<ul>
-<li>eg：$10^6$大小</li>
-</ul>
-</li>
-<li><p>使用<code>memset</code>对数组中每一个元素赋相同的值</p>
-<ul>
-<li>只建议初学者用其赋0或-1</li>
-<li>在<code>string.h</code>头文件中</li>
-</ul>
-</li>
-<li>字符数组<ul>
-<li>如果用%s输出，需加上<code>\0</code></li>
-<li>sscanf(str, “格式控制”, 变量地址)<ul>
-<li>从字符数组到变量</li>
-</ul>
-</li>
-<li>sprintf(str, “格式控制”, 变量名称)<ul>
-<li>从变量到字符数组</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h1 id="指针"><a href="#指针" class="headerlink" title="指针"></a>指针</h1><ul>
-<li>数组名称是指向数组首地址的指针</li>
-<li>存储变量地址</li>
-</ul>
-<h1 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h1><ul>
-<li>给变量起别名</li>
-<li>只能引用变量</li>
-<li>可引用指针</li>
-</ul>
-<h1 id="浮点数的比较"><a href="#浮点数的比较" class="headerlink" title="浮点数的比较"></a>浮点数的比较</h1><ul>
-<li>由于浮点数不是精确存储，所以引入一个$\epsilon$来确定误差</li>
-<li>$\epsilon$通常为$10^{-8}$<ul>
-<li>用科学记数法表示为1e-8</li>
-</ul>
-</li>
-</ul>
-<h1 id="时间复杂度"><a href="#时间复杂度" class="headerlink" title="时间复杂度"></a>时间复杂度</h1><ul>
-<li>OJ系统一般一秒可承受的运算次数为$10^7$-$10^8$<ul>
-<li>$O(n^{2})$级的算法规模为1000时可承受，n为100000时是不可接受的</li>
-</ul>
-</li>
-</ul>
-<h1 id="黑盒测试"><a href="#黑盒测试" class="headerlink" title="黑盒测试"></a>黑盒测试</h1><ul>
-<li>单点测试<ul>
-<li>根据每组输入数据的结果给出对应分数</li>
-<li>pat采用</li>
-</ul>
-</li>
-<li>多点测试<ul>
-<li>要求一次能运行所有数据</li>
-<li>大部分在线OJ采用</li>
-<li>例<ul>
-<li>while···EOF型</li>
-<li>while···break型</li>
-<li>while···T型</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// while···EOF</span></span><br><span class="line"><span class="keyword">while</span>(<span class="built_in">scanf</span>(<span class="string">"%d %d"</span>, &amp;a, &amp;b) != EOF)&#123;&#125;</span><br><span class="line"><span class="comment">// while···break</span></span><br><span class="line"><span class="keyword">while</span>(<span class="built_in">scanf</span>(<span class="string">"%d %d"</span>, &amp;a, &amp;b), a || b)&#123;&#125; <span class="comment">// a，b不同时为零</span></span><br><span class="line"><span class="comment">// while···T</span></span><br><span class="line"><span class="keyword">while</span>(T--)&#123;&#125;</span><br></pre></td></tr></table></figure>
-          
+<li>取值超过$2^{63}-1$时可用
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/03/18/the-note-of-algorithm-01/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
